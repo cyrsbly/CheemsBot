@@ -83,9 +83,9 @@ async def _(event):
     await catmusic(str(query), "128k", event)
     l = glob.glob("./temp/*.mp3")
     if l:
-        await event.edit("yeah..! i found something wi8..🥰")
+        await event.edit("Yeah! i found something wait..")
     else:
-        await event.edit(f"Sorry..! i can't find anything with `{query}`")
+        await event.edit(f"Sorry, I can't find anything with `{query}`")
         return
     thumbcat = glob.glob("./temp/*.jpg") + glob.glob("./temp/*.webp")
     if thumbcat:
@@ -121,13 +121,13 @@ async def _(event):
         if reply.message:
             query = reply.message
     else:
-        event = await event.edit("`What I am Supposed to find `")
+        event = await event.edit("`What I am Supposed to find? `")
         return
-    event = await event.edit("`wi8..! I am finding your song....`")
+    event = await event.edit("`Wait! Searching.`")
     await catmusic(str(query), "320k", event)
     l = glob.glob("./temp/*.mp3")
     if l:
-        await event.edit("yeah..! i found something wait")
+        await event.edit("Yeah! I found something, please wait.")
     else:
         await event.edit(f"Sorry..! i can't find anything with `{query}`")
         return
